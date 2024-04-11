@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic_code.controller">
+   <children>
+      <AnchorPane layoutY="70.0" prefHeight="330.0" prefWidth="92.0" style="-fx-background-color: grey;">
+         <children>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#translate" prefHeight="58.0" prefWidth="35.0" style="-fx-background-color: grey;" text="Button">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/kinhlup.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="77.0" mnemonicParsing="false" onAction="#MarkWordView" prefHeight="58.0" prefWidth="46.0" style="-fx-background-color: grey;" text="Button">
+               <graphic>
+                  <ImageView fx:id="MarkWordView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/kinhlup.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="136.0" mnemonicParsing="false" onAction="#Change_Add_Delete" prefHeight="50.0" prefWidth="58.0" style="-fx-background-color: grey;" text="Button">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/kinhlup.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="194.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="58.0" style="-fx-background-color: grey;" text="Button">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/kinhlup.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="252.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="58.0" style="-fx-background-color: grey;" text="Button">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/kinhlup.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: grey;">
+         <children>
+            <Label alignment="CENTER" layoutX="152.0" layoutY="6.0" prefHeight="60.0" prefWidth="438.0" text="Text here">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font></Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="content" layoutX="92.0" layoutY="70.0" prefHeight="330.0" prefWidth="508.0" />
+   </children>
+</AnchorPane>
