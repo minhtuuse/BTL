@@ -10,7 +10,7 @@ public class WordStartWith {
         this.set = s;
     }
 
-    public String searchForWord(String word, int start, int end) {
+    private String searchForWord(String word, int start, int end) {
         if (start >= end) {
             return "NOT FOUND";
         }
