@@ -29,9 +29,11 @@ public class Save {
                     if (Eng.compareTo(list.first()) < 0) {
                         bw.write("|" + Eng + "\n" + Vie);
                     } else {
-                        bw.write("|" + list.first() + "\n" + words.get(list.first()));
-                        deleted.add(list.first());
-                        list.remove(list.first());
+                        while (Eng.compareTo(list.first()) >= 0) {
+                            bw.write("|" + list.first() + "\n" + words.get(list.first()));
+                            deleted.add(list.first());
+                            list.remove(list.first());
+                        }
                         bw.write("|" + Eng + "\n" + Vie);
                     }
                 } else if(!deleted.contains(Eng)) {
