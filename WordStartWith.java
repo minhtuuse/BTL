@@ -6,8 +6,8 @@ public class WordStartWith {
     private TreeSet<String> set;
 
     /**
-     * @param l linkedlist cac tu  tieng  anh trong tu dien ban dau
-     * @param s tro toi l (cac tu tieng anh duoc them vao)
+     * @param l linkedlist cac tu  tieng  anh trong tu dien ban dau.
+     * @param s tro toi l (cac tu tieng anh duoc them vao).
      */
     public WordStartWith(LinkedList<String> l, TreeSet<String> s) {
         this.dic = l;
@@ -15,7 +15,7 @@ public class WordStartWith {
     }
 
     /**
-     * dung BinarySearch de tim ra 1 tu bat dau bang String  word
+     * dung BinarySearch de tim ra 1 tu bat dau bang String  word.
      *
      * @param word  tu can tim
      * @param start
@@ -37,10 +37,11 @@ public class WordStartWith {
     }
 
     /**
-     * dung ham searchForWord de tim duoc 1 tu bat dau bang  String word
-     * neu searchForWord tra ve "NOT FOUND"
-     * neu searchForWord tra ve 1 tu, tim vi tri cua tu do trong linkedlist, roi chay tu vi tri do den 2 dau
-     * tra ve tat ca cac tu bat dau voi String word
+     * dung ham searchForWord de tim duoc 1 tu bat dau bang  String word.
+     * neu searchForWord tra ve "NOT FOUND" ,xet den cac tu trong set. neu van khong co thi tra ve "NOT FOUND".
+     * neu searchForWord tra ve 1 tu, tim vi tri cua tu do trong linkedlist, roi chay tu vi tri do den 2 dau,
+     * sau do xet them cac tu trong set.
+     * tra ve tat ca cac tu bat dau voi String word.
      *
      * @param word
      * @return
