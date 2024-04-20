@@ -46,23 +46,24 @@ public class WordStartWith {
      * @param word
      * @return
      */
-    public String startsWith(String word) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(searchForWord(word, 1, dic.size()));
-        if (!sb.toString().equals("NOT FOUND")) {
-            int begin = dic.indexOf(sb.toString());
+    public void startsWith(String word) {
+        String[] words = new String[300];
+        int current = 1;
+        words[0] = searchForWord(word, 1, dic.size());
+        if (!words[0].equals("NOT FOUND")) {
+            int begin = dic.indexOf(words[0]);
             for (int i = begin - 1; i > 0; i--) {
                 if (dic.get(i).startsWith(word)) {
-                    sb.append("\n");
-                    sb.append(dic.get(i));
+                    words[current] = dic.get(i);
+                    current++;
                 } else {
                     break;
                 }
             }
             for (int t = begin + 1; t < dic.size(); t++) {
                 if (dic.get(t).startsWith(word)) {
-                    sb.append("\n");
-                    sb.append(dic.get(t));
+                    words[current] = dic.get(t);
+                    current++;
                 } else {
                     break;
                 }
@@ -71,23 +72,19 @@ public class WordStartWith {
         if (!set.isEmpty()) {
             for (String x : set) {
                 if (x.startsWith(word)) {
-                    sb.append("\n");
-                    sb.append(x);
+                    words[current] = x;
+                    current++;
                 }
             }
         }
-        String[] lines = sb.toString().split("\n");
-        sb.setLength(0);
-        if (lines.length < 2 && lines[0].equals("NOT FOUND")) {
-            return "NOT FOUND";
+        if (current < 2 && words[0].equals("NOT FOUND")) {
+            System.out.println("NOT FOUND");
         } else {
-            for (int i = 0; i < lines.length; i++) {
-                if (!lines[i].equals("NOT FOUND")) {
-                    sb.append(lines[i]);
-                    sb.append("\n");
+            for (int i = 0; i < current; i++) {
+                if (!words[i].equals("NOT FOUND")) {
+                    System.out.println(words[i]);
                 }
             }
         }
-        return sb.toString();
     }
 }
