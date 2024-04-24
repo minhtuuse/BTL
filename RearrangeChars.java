@@ -9,7 +9,7 @@ public class RearrangeChars extends Game {
     }
 
     /**
-     * in cac tu tao nen dap an ra man hinh
+     * in cac chu tao nen dap an ra man hinh
      */
     private void giveCharsToRearrange() {
         List<Character> givenChars = new ArrayList<>();
@@ -30,24 +30,6 @@ public class RearrangeChars extends Game {
     public void getAWord() {
         shuffleWords();
         correctAnswer = words.get(0);
-        words.remove(words.get(0));
         giveCharsToRearrange();
-    }
-
-    /**
-     * kiem  tra dap an
-     * @param answer
-     */
-    public void checkAnswer(String answer) {
-        String trimmedAnswer = answer.trim();
-        String trimmedCorrectAnswer = correctAnswer.trim();
-        if (trimmedAnswer.equals(trimmedCorrectAnswer)) {
-            setScore();
-            System.out.println("DUNG");
-            System.out.println(getScore());
-        } else {
-            System.out.println("SAI");
-            System.out.println(correctAnswer);
-        }
     }
 }

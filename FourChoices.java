@@ -21,7 +21,7 @@ public class FourChoices extends Game {
             choices.add(words.get(i));
         }
         Random random = new Random();
-        correctAnswer = words.get(random.nextInt(4));
+        setCorrectAnswer(words.get(random.nextInt(4)));
     }
 
     /**
@@ -39,13 +39,7 @@ public class FourChoices extends Game {
 
     /**
      * neu dap an nguoi dung chon trung voi dap an dung thi in ra dung
+     *
      * @param answer
      */
-    public void checkAnswer(String answer) {
-        if (answer.equals(correctAnswer)) {
-            System.out.println("DUNG");
-        } else {
-            System.out.println("SAI");
-        }
-    }
 }
