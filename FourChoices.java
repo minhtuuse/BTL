@@ -36,10 +36,4 @@ public class FourChoices extends Game {
             System.out.println(x);
         }
     }
-
-    /**
-     * neu dap an nguoi dung chon trung voi dap an dung thi in ra dung
-     *
-     * @param answer
-     */
 }
