@@ -46,24 +46,21 @@ public class WordStartWith {
      * @param word
      * @return
      */
-    public void startsWith(String word) {
-        String[] words = new String[300];
-        int current = 1;
-        words[0] = searchForWord(word, 1, dic.size());
-        if (!words[0].equals("NOT FOUND")) {
-            int begin = dic.indexOf(words[0]);
+     public List<String> startsWith(String word) {
+        List<String> foundWords = new ArrayList<>();
+        foundWords.add(searchForWord(word, 1, dic.size()));
+        if (!foundWords.get(0).equals("NOT FOUND")) {
+            int begin = dic.indexOf(foundWords.get(0));
             for (int i = begin - 1; i > 0; i--) {
                 if (dic.get(i).startsWith(word)) {
-                    words[current] = dic.get(i);
-                    current++;
+                    foundWords.add(dic.get(i));
                 } else {
                     break;
                 }
             }
             for (int t = begin + 1; t < dic.size(); t++) {
                 if (dic.get(t).startsWith(word)) {
-                    words[current] = dic.get(t);
-                    current++;
+                    foundWords.add(dic.get(t));
                 } else {
                     break;
                 }
@@ -72,19 +69,13 @@ public class WordStartWith {
         if (!set.isEmpty()) {
             for (String x : set) {
                 if (x.startsWith(word)) {
-                    words[current] = x;
-                    current++;
+                    foundWords.add(x);
                 }
             }
         }
-        if (current < 2 && words[0].equals("NOT FOUND")) {
-            System.out.println("NOT FOUND");
-        } else {
-            for (int i = 0; i < current; i++) {
-                if (!words[i].equals("NOT FOUND")) {
-                    System.out.println(words[i]);
-                }
-            }
+        if (foundWords.size() > 1 && !foundWords.get(0).equals("NOT FOUND")) {
+            foundWords.remove(0);
         }
+        return foundWords;
     }
 }
