@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.util.Base64;
 
-public class GoogleAPI {
+public class API {
     public static final String GOOGLE_TRANSLATE_URL = "http://translate.google.com/translate_a/t?";
     private static final SecureRandom secureRandom = new SecureRandom(); // threadsafe
     private static final Base64.Encoder base64Encoder = Base64.getUrlEncoder(); // threadsafe

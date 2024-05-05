@@ -8,18 +8,21 @@
 
 <AnchorPane prefHeight="482.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic_code.game2_controller">
    <children>
-      <TextArea fx:id="question" layoutX="230.0" layoutY="139.0" prefHeight="152.0" prefWidth="282.0" visible="false"/>
-      <Button fx:id="ans1" layoutX="34.0" layoutY="370.0" mnemonicParsing="false" onAction="#da1" prefHeight="42.0" prefWidth="130.0" text="Button" visible="false"/>
-      <Button fx:id="ans2" layoutX="214.0" layoutY="370.0" mnemonicParsing="false" onAction="#da2" prefHeight="42.0" prefWidth="130.0" text="Button" visible="false"/>
-      <Button fx:id="ans3" layoutX="382.0" layoutY="370.0" mnemonicParsing="false" onAction="#da3" prefHeight="42.0" prefWidth="130.0" text="Button" visible="false"/>
-      <Button fx:id="ans4" layoutX="547.0" layoutY="370.0" mnemonicParsing="false" onAction="#da4" prefHeight="42.0" prefWidth="130.0" text="Button" visible="false"/>
-      <Button fx:id="next" layoutX="630.0" mnemonicParsing="false" onAction="#nextquestion" prefHeight="42.0" prefWidth="75.0" text="TIẾP" visible="false"/>
+      <TextArea fx:id="question" layoutX="230.0" layoutY="139.0" prefHeight="152.0" prefWidth="282.0" visible="false" />
+      <Button fx:id="ans1" layoutX="34.0" layoutY="370.0" mnemonicParsing="false" onAction="#da1" prefHeight="42.0" prefWidth="130.0" text="Button" visible="false" />
+      <Button fx:id="ans2" layoutX="214.0" layoutY="370.0" mnemonicParsing="false" onAction="#da2" prefHeight="42.0" prefWidth="130.0" text="Button" visible="false" />
+      <Button fx:id="ans3" layoutX="382.0" layoutY="370.0" mnemonicParsing="false" onAction="#da3" prefHeight="42.0" prefWidth="130.0" text="Button" visible="false" />
+      <Button fx:id="ans4" layoutX="547.0" layoutY="370.0" mnemonicParsing="false" onAction="#da4" prefHeight="42.0" prefWidth="130.0" text="Button" visible="false" />
+      <Button fx:id="next" layoutX="630.0" mnemonicParsing="false" onAction="#nextquestion" prefHeight="42.0" prefWidth="75.0" text="TIẾP" visible="false" />
       <Label fx:id="lb" alignment="CENTER" layoutX="230.0" layoutY="40.0" prefHeight="58.0" prefWidth="282.0" style="-fx-background-color: pink;" text="CHỌN ĐÁP ÁN ĐÚNG" visible="false">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="start" layoutX="319.0" layoutY="191.0" mnemonicParsing="false" onAction="#begin" prefHeight="87.0" prefWidth="104.0" text="BẮT ĐẦU"/>
+      <Button fx:id="start" layoutX="248.0" layoutY="163.0" mnemonicParsing="false" onAction="#begin" prefHeight="128.0" prefWidth="210.0" text="BẮT ĐẦU">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font></Button>
       <Button fx:id="again" layoutX="306.0" layoutY="279.0" mnemonicParsing="false" onAction="#choilai" prefHeight="51.0" prefWidth="130.0" text="CHƠI LẠI" visible="false">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />

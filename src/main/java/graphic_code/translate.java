@@ -37,7 +37,7 @@ public class translate implements Initializable {
     Search_word search_word = new Search_word();
     EditDic e=new EditDic();
     SOUND audioAPI=new SOUND();
-    GoogleAPI googleAPI=new GoogleAPI();
+    API googleAPI=new API();
     WordStartWith wordStartWith = new WordStartWith(new LinkedList<String>(search_word.getMap().keySet()), e.getSet());
     private WordSuggestion wordSuggestion = new WordSuggestion(new LinkedList<String>(search_word.getMap().keySet()), e.getSet());
     private boolean offline=true;
