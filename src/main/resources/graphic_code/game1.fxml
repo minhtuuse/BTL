@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="482.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic_code.game1_controller">
+   <children>
+      <Button fx:id="again" layoutX="314.0" layoutY="362.0" mnemonicParsing="false" onAction="#choilai" prefHeight="47.0" prefWidth="86.0" text="CHƠI LẠI" visible="false">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="dapan" alignment="CENTER" layoutX="246.0" layoutY="241.0" prefHeight="26.0" prefWidth="223.0" visible="false" />
+      <Label fx:id="lb1" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="79.0" prefHeight="62.0" prefWidth="406.0" style="-fx-background-color: pink;" textAlignment="JUSTIFY" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb2" alignment="CENTER" contentDisplay="CENTER" layoutX="228.0" layoutY="177.0" prefHeight="47.0" prefWidth="250.0" text="NHẬP TỪ TIẾNG ANH" textAlignment="JUSTIFY" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="submit" layoutX="255.0" layoutY="300.0" mnemonicParsing="false" onAction="#nop" prefHeight="47.0" prefWidth="66.0" text="NỘP" visible="false" />
+      <Button fx:id="hint" layoutX="395.0" layoutY="300.0" mnemonicParsing="false" onAction="#goiy" prefHeight="47.0" prefWidth="66.0" text="GỢI Ý" visible="false" />
+      <Label fx:id="score" layoutX="14.0" prefHeight="47.0" prefWidth="140.0" text="Điểm:" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="start" layoutX="252.0" layoutY="172.0" mnemonicParsing="false" onAction="#begin" prefHeight="128.0" prefWidth="210.0" text="BẮT ĐẦU">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="next" layoutX="630.0" mnemonicParsing="false" onAction="#nextquestion" prefHeight="47.0" prefWidth="76.0" text="TIẾP" visible="false">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

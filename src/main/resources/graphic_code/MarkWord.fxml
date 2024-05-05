@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic_code.MarkWord">
+   <children>
+      <VBox prefHeight="429.0" prefWidth="706.0">
+         <children>
+            <ListView fx:id="myListView" prefHeight="453.0" prefWidth="706.0" />
+         </children>
+      </VBox>
+      <Button fx:id="unmark" layoutX="320.0" layoutY="442.0" mnemonicParsing="false" onAction="#UnMarkWord" text="UNMARK" />
+   </children>
+</AnchorPane>
