@@ -18,8 +18,10 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) {
 		try {
+			Image image=new Image("file:///D:/OOP/DIC_/src/main/java/image/tải xuống.jpg");
 			Parent root = FXMLLoader.load(getClass().getResource("/graphic_code/Start_scene.fxml"));
 			Scene scene=new Scene(root);
+			stage.getIcons().add(image);
 			stage.setTitle("BaiTapLon");
 			stage.setScene(scene);
 			stage.setResizable(true);
