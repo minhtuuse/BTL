@@ -4,32 +4,32 @@ import java.util.List;
 
 public class RearrangeChars extends Game {
 
+
     public RearrangeChars(List<String> l) {
         super(l);
     }
 
-    /**
-     * in cac chu tao nen dap an ra man hinh
-     */
-    private void giveCharsToRearrange() {
+    public String giveCharsToRearrange() {
+        shuffleWords();
+        correctAnswer = words.get(0);
         List<Character> givenChars = new ArrayList<>();
         for (char c : correctAnswer.toCharArray()) {
             givenChars.add(c);
         }
         Collections.shuffle(givenChars);
-        for (char c : givenChars) {
-            System.out.print(c);
-            System.out.print("/");
+        StringBuilder result=new StringBuilder();
+        for(char a:givenChars){
+            result.append(a);
+            result.append("/");
         }
-        System.out.println("\n");
+        result.deleteCharAt(result.length()-1);
+        return result.toString();
     }
-
-    /**
-     * chon 1 tu bat ki trong tu dien
-     */
-    public void getAWord() {
-        shuffleWords();
-        correctAnswer = words.get(0);
-        giveCharsToRearrange();
+    
+    public String tips(int i){
+        if(i>correctAnswer.length()){
+            return "LOI";
+        }
+        return correctAnswer.substring(0,i);
     }
 }
