@@ -13,15 +13,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic_code.translate">
    <children>
-      <TextField fx:id="myTextField" layoutX="85.0" layoutY="34.0" onKeyPressed="#handleWordSuggestions" prefHeight="26.0" prefWidth="138.0" />
-      <TextArea fx:id="myTextArea" layoutX="282.0" prefHeight="482.0" prefWidth="424.0" style="-fx-background-color: GREY;" />
-      <Button fx:id="dich" layoutX="231.0" layoutY="34.0" mnemonicParsing="false" onAction="#input" text="DỊCH" />
-      <VBox layoutX="1.0" layoutY="294.0" prefHeight="188.0" prefWidth="280.0">
+      <TextField fx:id="myTextField" layoutX="130.0" layoutY="33.0" onKeyPressed="#handleWordSuggestions" prefHeight="26.0" prefWidth="138.0" />
+      <TextArea fx:id="myTextArea" layoutY="258.0" prefHeight="233.0" prefWidth="706.0" style="-fx-control-inner-background:#273fdc; -fx-font-family: Consolas; -fx-highlight-fill:  #273fdc; -fx-highlight-text-fill: #273fdc; -fx-text-fill: white; ">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></TextArea>
+      <Button fx:id="dich" layoutX="292.0" layoutY="33.0" mnemonicParsing="false" onAction="#input" style="-fx-background-color: #273fdc;" text="DỊCH" textFill="#e5e6ec" />
+      <VBox layoutX="426.0" prefHeight="257.0" prefWidth="280.0">
          <children>
-            <ListView fx:id="mylistview" prefHeight="188.0" prefWidth="265.0" />
-         </children>
-      </VBox>
-      <Button contentDisplay="GRAPHIC_ONLY" layoutX="85.0" layoutY="169.0" mnemonicParsing="false" onAction="#MarkWord" prefHeight="46.0" prefWidth="46.0" text="Button">
+            <ListView fx:id="mylistview" prefHeight="259.0" prefWidth="280.0" />
+         </children></VBox>
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="131.0" layoutY="169.0" mnemonicParsing="false" onAction="#MarkWord" prefHeight="46.0" prefWidth="46.0" text="Button">
          <graphic>
             <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -30,12 +32,12 @@
             </ImageView>
          </graphic>
       </Button>
-      <VBox fx:id="MyVBOX" layoutX="84.0" layoutY="72.0" prefHeight="86.0" prefWidth="138.0" visible="true">
+      <VBox fx:id="MyVBOX" layoutX="130.0" layoutY="71.0" prefHeight="86.0" prefWidth="138.0" visible="true">
     <children>
         <ListView fx:id="GoiY" prefHeight="200.0" prefWidth="200.0" />
     </children>
 </VBox>
-      <Button contentDisplay="GRAPHIC_ONLY" layoutX="176.0" layoutY="169.0" mnemonicParsing="false" onAction="#playsound" prefHeight="46.0" prefWidth="46.0" text="Button">
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="221.0" layoutY="169.0" mnemonicParsing="false" onAction="#playsound" prefHeight="46.0" prefWidth="46.0" text="Button">
          <graphic>
             <ImageView blendMode="COLOR_BURN" fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>

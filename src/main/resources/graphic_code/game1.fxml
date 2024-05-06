@@ -31,7 +31,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="start" layoutX="252.0" layoutY="172.0" mnemonicParsing="false" onAction="#begin" prefHeight="128.0" prefWidth="210.0" text="BẮT ĐẦU">
+      <Button fx:id="start" layoutX="248.0" layoutY="163.0" mnemonicParsing="false" onAction="#begin" prefHeight="128.0" prefWidth="210.0" text="BẮT ĐẦU">
          <font>
             <Font name="Times New Roman" size="36.0" />
          </font>
