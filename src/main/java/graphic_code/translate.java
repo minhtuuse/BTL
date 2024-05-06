@@ -99,7 +99,7 @@ public class translate implements Initializable {
     public void setHistory(String inputString) throws IOException {
         history.clear();
         history.add(inputString);
-        dictionaryExportToFile(history, "D:\\OOP\\DIC_\\src\\main\\java\\History");
+        dictionaryExportToFile(history, "src/main/java/History");
         mylistview.getItems().setAll(history);
         history.clear();
     }
@@ -122,7 +122,7 @@ public class translate implements Initializable {
         ArrayList<String> aList = new ArrayList<String>();
         String inputString = myTextField.getText();
         aList.add(inputString);
-        dictionaryExportToFile(aList, "D:\\OOP\\DIC_\\src\\main\\java\\markedwords");
+        dictionaryExportToFile(aList, "src/main/java/markedwords");
     }
 
     public void handleWordSuggestions(KeyEvent event) {
@@ -172,7 +172,7 @@ public class translate implements Initializable {
         //display the history in the first time running
         if (mylistview != null) {
             history.clear();
-            history = readfromfile("D:\\OOP\\DIC_\\src\\main\\java\\History");
+            history = readfromfile("src/main/java/History");
             mylistview.getItems().setAll(history);
         }
         // Add listener to mylistview selection model

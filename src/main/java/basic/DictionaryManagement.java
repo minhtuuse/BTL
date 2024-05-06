@@ -26,7 +26,7 @@ public class DictionaryManagement {
 	}
 	public void insertFromFile(List<Word> list) {
 	    try {
-	        File file = new File("D:\\OOP\\DIC_\\src\\main\\java\\source.txt");
+	        File file = new File("src/main/java/source.txt");
 	        FileReader fileReader = new FileReader(file);
 	        BufferedReader bufferedReader = new BufferedReader(fileReader);
 	        String word_targetString;
@@ -117,6 +117,10 @@ public class DictionaryManagement {
 		}
 		System.out.println("List dont have this word");
 		return;
+	}
+	public static void main(String args[]){
+		DictionaryCommandline dictionaryCommandline=new DictionaryCommandline();
+		dictionaryCommandline.dictionaryAdvanced();
 	}
 }	
 

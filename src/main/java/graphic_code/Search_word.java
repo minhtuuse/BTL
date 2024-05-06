@@ -15,7 +15,7 @@ public class Search_word {
     public void initialize() throws IOException {
         StringBuilder sb = new StringBuilder();
         StringBuilder sb2 = new StringBuilder();
-        FileReader fr = new FileReader("D:\\OOP\\DIC_\\src\\main\\java\\dictionaries.txt");
+        FileReader fr = new FileReader("src/main/java/dictionaries.txt");
         BufferedReader br = new BufferedReader(fr);
         String line;
         while ((line = br.readLine()) != null) {

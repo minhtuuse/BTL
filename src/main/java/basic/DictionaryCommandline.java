@@ -51,7 +51,7 @@ public class DictionaryCommandline {
 	{
 		BufferedWriter bufferedWriter=null;
 		try {
-			File file=new File("D:\\OOP\\DIC_\\src\\main\\java\\output_file");
+			File file=new File("src/main/java/output_file");
 			FileWriter fileWriter=new FileWriter(file);
 			bufferedWriter= new BufferedWriter(fileWriter);
 			for(Word word :words)
