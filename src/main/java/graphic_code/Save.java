@@ -26,7 +26,8 @@ public class Save {
         String filePath = "src/main/java/dictionaries.txt"; // Relative path
         Files.createDirectories(Paths.get(filePath).getParent());
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
-            TreeSet<String> copy = new TreeSet<>(list);
+            TreeSet<String> copy = new TreeSet<>();
+            copy.addAll(list);
             for (Map.Entry<String, String> entry : words.entrySet()) {
                 String Eng = entry.getKey();
                 String Vie = entry.getValue();
@@ -35,9 +36,10 @@ public class Save {
                         if (Eng.compareTo(copy.first()) < 0) {
                             bw.write("|" + Eng + "\n" + Vie);
                         } else {
-                            while (!copy.isEmpty() && Eng.compareTo(copy.first())>=0){
-                            bw.write("|" + copy.first() + "\n" + words.get(copy.first()));
-                            copy.remove(copy.first());}
+                            while (!copy.isEmpty() && Eng.compareTo(copy.first()) >= 0) {
+                                bw.write("|" + copy.first() + "\n" + words.get(copy.first()));
+                                copy.remove(copy.first());
+                            }
                             bw.write("|" + Eng + "\n" + Vie);
                         }
                     } else if (!list.contains(Eng)) {
