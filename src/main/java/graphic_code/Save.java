@@ -35,7 +35,7 @@ public class Save {
                         if (Eng.compareTo(copy.first()) < 0) {
                             bw.write("|" + Eng + "\n" + Vie);
                         } else {
-                            while (Eng.compareTo(copy.first())>=0){
+                            while (!copy.isEmpty() && Eng.compareTo(copy.first())>=0){
                             bw.write("|" + copy.first() + "\n" + words.get(copy.first()));
                             copy.remove(copy.first());}
                             bw.write("|" + Eng + "\n" + Vie);
@@ -51,6 +51,7 @@ public class Save {
                 }
             }
             bw.write("|");
+            bw.flush();
         }
     }
 }
