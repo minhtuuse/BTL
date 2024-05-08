@@ -26,29 +26,28 @@ public class Save {
         String filePath = "src/main/java/dictionaries.txt"; // Relative path
         Files.createDirectories(Paths.get(filePath).getParent());
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
-            Set<String> deleted = new HashSet<>();
+            TreeSet<String> copy = new TreeSet<>(list);
             for (Map.Entry<String, String> entry : words.entrySet()) {
                 String Eng = entry.getKey();
                 String Vie = entry.getValue();
                 if (!Eng.isEmpty() && !list.contains(Eng)) {
-                    if (!list.isEmpty()) {
-                        if (Eng.compareTo(list.first()) < 0) {
+                    if (!copy.isEmpty()) {
+                        if (Eng.compareTo(copy.first()) < 0) {
                             bw.write("|" + Eng + "\n" + Vie);
                         } else {
-                            bw.write("|" + list.first() + "\n" + words.get(list.first()));
-                            deleted.add(list.first());
-                            list.remove(list.first());
+                            while (Eng.compareTo(copy.first())>=0){
+                            bw.write("|" + copy.first() + "\n" + words.get(copy.first()));
+                            copy.remove(copy.first());}
                             bw.write("|" + Eng + "\n" + Vie);
                         }
-                    } else if (!deleted.contains(Eng)) {
+                    } else if (!list.contains(Eng)) {
                         bw.write("|" + Eng + "\n" + Vie);
                     }
                 }
             }
-            if (!list.isEmpty()) {
-                for (String x : list) {
+            if (!copy.isEmpty()) {
+                for (String x : copy) {
                     bw.write("|" + x + "\n" + words.get(x));
-                    System.out.println(x);
                 }
             }
             bw.write("|");
