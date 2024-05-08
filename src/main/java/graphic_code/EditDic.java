@@ -38,7 +38,7 @@ public class EditDic {
     private Button confirm;
     Search_word search_word=new Search_word();
     private Map<String ,String> words=search_word.getMap();
-    private TreeSet<String> wordSet=new TreeSet<String>() ;
+    private static TreeSet<String> wordSet=new TreeSet<String>() ;
     public void init() {
         add_=false;
         change_=false;
@@ -102,8 +102,8 @@ public class EditDic {
     }
     public void action(ActionEvent event) throws IOException {
         if(add_==true) {
-            String Eng=word.getText().toLowerCase();
-            String Vie=meaning.getText().toLowerCase();
+            String Eng=word.getText();
+            String Vie=meaning.getText();
             if (words.containsKey(Eng)) {
                 notification.setText("WORD ALREADY EXISTS");
             } else {
@@ -113,8 +113,8 @@ public class EditDic {
             }
         }
         else if(change_==true) {
-            String Eng=word.getText().toLowerCase();
-            String Vie=meaning.getText().toLowerCase();
+            String Eng=word.getText();
+            String Vie=meaning.getText();
             if (!words.containsKey(Eng)) {
                 notification.setText("WORD DON'T EXIST");
             } else {
@@ -123,8 +123,8 @@ public class EditDic {
             }
         }
         else if (addmeaning_==true) {
-            String Eng=word.getText().toLowerCase();
-            String Vie=meaning.getText().toLowerCase();
+            String Eng=word.getText();
+            String Vie=meaning.getText();
             if (!words.containsKey(Eng)) {
                 notification.setText("WORD DON'T EXIST");
             } else {
@@ -138,11 +138,14 @@ public class EditDic {
             }
         }
         else if (remove_==true) {
-            String Eng=word.getText().toLowerCase();
+            String Eng=word.getText();
             if(!words.containsKey(Eng)){
                 notification.setText("WORD DON'T EXIST");
             } else {
                 words.remove(Eng);
+                if(wordSet.contains(Eng)){
+                    wordSet.remove(Eng);
+                }
                 notification.setText("WORD HAVE BEEN REMOVED");
             }
         }
@@ -152,7 +155,7 @@ public class EditDic {
         Save save = new Save(words, wordSet);
         save.save();
     }
-    public TreeSet<String> getSet(){
-        return this.wordSet;
+    public static TreeSet<String> getSet(){
+        return wordSet;
     }
 }
