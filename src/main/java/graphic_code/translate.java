@@ -107,7 +107,7 @@ public class translate implements Initializable {
     public void input(ActionEvent event) throws IOException {
         String inputString = myTextField.getText();
         if(offline) {
-            myTextArea.setText(search_word.searchForWord(inputString.toLowerCase()));
+            myTextArea.setText(search_word.searchForWord(inputString));
         }else {
             if(Eng) {
                 myTextArea.setText(googleAPI.translate(inputString, "en", "vi"));
