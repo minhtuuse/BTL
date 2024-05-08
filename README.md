@@ -1,9 +1,9 @@
 Author
-Group 1
+Group Troll
 
-Pham Minh Tu - 22020001
+Pham Minh Tu - 23020429
 
-Chu Thanh Tung - 22020002
+Chu Thanh Tung - 23020431
 
 Mai Phan Anh Tung - 23020433
 
