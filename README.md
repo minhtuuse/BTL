@@ -1,4 +1,7 @@
-Author
+Application to support learning English using Java
+
+uthor
+
 Group Troll
 
 Pham Minh Tu - 23020429
