@@ -20,7 +20,7 @@ public class WordSuggestion {
     }
 
     public void provideSuggestions(TextField inputField, ListView<String> suggestionList, String keyString) {
-        String input = inputField.getText().toLowerCase();
+        String input = inputField.getText();
         input += keyString;
         List<String> suggestions = new ArrayList<>();
         WordStartWith wordStartWith = new WordStartWith(dictionary, additionalWords);
