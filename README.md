@@ -1,6 +1,6 @@
 Application to support learning English using Java
 
-uthor
+athor
 
 Group Troll
 
