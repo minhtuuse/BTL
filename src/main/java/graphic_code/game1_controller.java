@@ -92,13 +92,15 @@ public class game1_controller {
     }
     public void nop(ActionEvent event){
         String answer = dapan.getText();
-        if(rearrangeChars.checkAnswer(answer)){
-            diem+=10;
-        }else {
-            diem-=10;
+        if(!lb1.getText().equals(rearrangeChars.getCorrectAnswer())) {
+            if (rearrangeChars.checkAnswer(answer)) {
+                diem += 10;
+            } else {
+                diem -= 10;
+            }
+            score.setText("Điểm:" + diem);
+            lb1.setText(rearrangeChars.getCorrectAnswer());
         }
-        score.setText("Điểm:"+diem);
-        lb1.setText(rearrangeChars.getCorrectAnswer());
     }
     public void goiy(ActionEvent event){
         if(luot>3){

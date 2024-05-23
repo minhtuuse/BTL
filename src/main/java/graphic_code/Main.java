@@ -14,6 +14,7 @@ import java.io.IOException;
 import graphic_code.MarkWord;
 import graphic_code.Search_word;
 
+
 public class Main extends Application {
 	@Override
 	public void start(Stage stage) {

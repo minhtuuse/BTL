@@ -33,6 +33,7 @@ public class game2_controller {
     FourChoices fourChoices=new FourChoices(search_word.getMap());
     private int cauhoi = 0;
     boolean playagain = false;
+    boolean choose=false;
     private int diem =0;
     public void resetcolor(){
         ans1.setStyle("-fx-background-color: grxáey;");
@@ -94,88 +95,93 @@ public class game2_controller {
             ans4.setText(ques.get(4));
         }
     }
-    public void da1(ActionEvent event){
-        String answer = ans1.getText();
-        if(fourChoices.checkAnswer(answer)){
-            ans1.setStyle("-fx-background-color: green");
-            diem+=10;
-        }else {
-            diem-=10;
-            ans1.setStyle("-fx-background-color: red");
-            if(fourChoices.checkAnswer(ans2.getText())){
-                ans2.setStyle("-fx-background-color: green");
-            }
-            else if(fourChoices.checkAnswer(ans3.getText())){
-                ans3.setStyle("-fx-background-color: green");
-            }
-            else if(fourChoices.checkAnswer(ans4.getText())){
-                ans4.setStyle("-fx-background-color: green");
-            }
-        }
-        score.setText("Điểm:"+diem);
-    }
-    public void da2(ActionEvent event){
-        String answer = ans2.getText();
-        if(fourChoices.checkAnswer(answer)){
-            ans2.setStyle("-fx-background-color: green");
-            diem+=10;
-        }else {
-            diem-=10;
-            ans2.setStyle("-fx-background-color: red");
-            if(fourChoices.checkAnswer(ans1.getText())){
+    public void da1(ActionEvent event) {
+        if (choose == false) {
+            choose=true;
+            String answer = ans1.getText();
+            if (fourChoices.checkAnswer(answer)) {
                 ans1.setStyle("-fx-background-color: green");
+                diem += 10;
+            } else {
+                diem -= 10;
+                ans1.setStyle("-fx-background-color: red");
+                if (fourChoices.checkAnswer(ans2.getText())) {
+                    ans2.setStyle("-fx-background-color: green");
+                } else if (fourChoices.checkAnswer(ans3.getText())) {
+                    ans3.setStyle("-fx-background-color: green");
+                } else if (fourChoices.checkAnswer(ans4.getText())) {
+                    ans4.setStyle("-fx-background-color: green");
+                }
             }
-            else if(fourChoices.checkAnswer(ans3.getText())){
-                ans3.setStyle("-fx-background-color: green");
-            }
-            else if(fourChoices.checkAnswer(ans4.getText())){
-                ans4.setStyle("-fx-background-color: green");
-            }
+            score.setText("Điểm:" + diem);
         }
-        score.setText("Điểm:"+diem);
     }
-    public void da3(ActionEvent event){
-        String answer = ans3.getText();
-        if(fourChoices.checkAnswer(answer)){
-            ans3.setStyle("-fx-background-color: green");
-            diem+=10;
-        }else {
-            diem-=10;
-            ans3.setStyle("-fx-background-color: red");
-            if(fourChoices.checkAnswer(ans2.getText())){
+    public void da2(ActionEvent event) {
+        if (choose == false) {
+            choose=true;
+            String answer = ans2.getText();
+            if (fourChoices.checkAnswer(answer)) {
                 ans2.setStyle("-fx-background-color: green");
+                diem += 10;
+            } else {
+                diem -= 10;
+                ans2.setStyle("-fx-background-color: red");
+                if (fourChoices.checkAnswer(ans1.getText())) {
+                    ans1.setStyle("-fx-background-color: green");
+                } else if (fourChoices.checkAnswer(ans3.getText())) {
+                    ans3.setStyle("-fx-background-color: green");
+                } else if (fourChoices.checkAnswer(ans4.getText())) {
+                    ans4.setStyle("-fx-background-color: green");
+                }
             }
-            else if(fourChoices.checkAnswer(ans1.getText())){
-                ans1.setStyle("-fx-background-color: green");
-            }
-            else if(fourChoices.checkAnswer(ans4.getText())){
-                ans4.setStyle("-fx-background-color: green");
-            }
+            score.setText("Điểm:" + diem);
         }
-        score.setText("Điểm:"+diem);
     }
-    public void da4(ActionEvent event){
-        String answer = ans4.getText();
-        if(fourChoices.checkAnswer(answer)){
-            ans4.setStyle("-fx-background-color: green");
-            diem+=10;
-        }else {
-            diem-=10;
-            ans4.setStyle("-fx-background-color: red");
-            if(fourChoices.checkAnswer(ans2.getText())){
-                ans2.setStyle("-fx-background-color: green");
-            }
-            else if(fourChoices.checkAnswer(ans3.getText())){
+    public void da3(ActionEvent event) {
+        if (choose == false) {
+            choose=true;
+            String answer = ans3.getText();
+            if (fourChoices.checkAnswer(answer)) {
                 ans3.setStyle("-fx-background-color: green");
+                diem += 10;
+            } else {
+                diem -= 10;
+                ans3.setStyle("-fx-background-color: red");
+                if (fourChoices.checkAnswer(ans2.getText())) {
+                    ans2.setStyle("-fx-background-color: green");
+                } else if (fourChoices.checkAnswer(ans1.getText())) {
+                    ans1.setStyle("-fx-background-color: green");
+                } else if (fourChoices.checkAnswer(ans4.getText())) {
+                    ans4.setStyle("-fx-background-color: green");
+                }
             }
-            else if(fourChoices.checkAnswer(ans1.getText())){
-                ans1.setStyle("-fx-background-color: green");
-            }
+            score.setText("Điểm:" + diem);
         }
-        score.setText("Điểm:"+diem);
+    }
+    public void da4(ActionEvent event) {
+        if (choose == false) {
+            choose=true;
+            String answer = ans4.getText();
+            if (fourChoices.checkAnswer(answer)) {
+                ans4.setStyle("-fx-background-color: green");
+                diem += 10;
+            } else {
+                diem -= 10;
+                ans4.setStyle("-fx-background-color: red");
+                if (fourChoices.checkAnswer(ans2.getText())) {
+                    ans2.setStyle("-fx-background-color: green");
+                } else if (fourChoices.checkAnswer(ans3.getText())) {
+                    ans3.setStyle("-fx-background-color: green");
+                } else if (fourChoices.checkAnswer(ans1.getText())) {
+                    ans1.setStyle("-fx-background-color: green");
+                }
+            }
+            score.setText("Điểm:" + diem);
+        }
     }
     public void nextquestion(ActionEvent event){
         cauhoi++;
+        choose=false;
         resetcolor();
         game();
     }
